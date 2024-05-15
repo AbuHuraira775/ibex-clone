@@ -1,0 +1,1683 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: .3s ease all;
+}
+
+body {
+    height: 300vh;
+    overflow-x: hidden;
+}
+
+:root {
+    --activeColor: #FA0060;
+    --circle3: #BB9FE1;
+    --circle2: #dccbec;
+    --fadeText: #5B5B5B;
+}
+
+// --common
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    padding: .8rem 1.6rem;
+}
+
+.container {
+    padding: 1rem 4.5rem;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+.block {
+    display: grid;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+img,
+video {
+    width: 100%;
+}
+
+.space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    color: var(--activeColor);
+}
+
+.mt5 {
+    margin-top: 5vw;
+}
+
+.h-100 {
+    height: 100vh;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.radius-50 {
+    border-radius: 50%;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.red {
+    color: var(--activeColor);
+}
+
+// ------------------navbar 
+.hidden {
+    display: none;
+}
+
+li a {
+    color: black;
+}
+
+.desktopNav {
+    width: 100%;
+    height: 4vw;
+    padding: 2rem 3rem;
+    position: fixed;
+    top: 0;
+    transition: .5s ease all;
+    z-index: 10000;
+    // display: none;
+}
+
+.desktopNavLogo {
+    width: 12%;
+}
+
+.desNavLinks {
+    width: 60%;
+}
+
+.desktopLinksLI {
+    width: 80%;
+}
+
+.desktopLinksLI ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.desktopinkLogin button {
+    margin-left: 2rem;
+    border-radius: 2rem;
+    padding: .7rem 3rem;
+    border: 1px solid transparent;
+    background-color: var(--activeColor);
+    color: #ffff;
+}
+
+.desktopLinksLI li a:hover {
+    color: var(--activeColor);
+}
+
+.desktopinkLogin button:hover {
+    border: 1px solid var(--activeColor);
+    background-color: #ffff;
+    color: var(--activeColor);
+}
+
+// ---------------------mobile nav 
+.mobileNav {
+    width: 100%;
+    height: 4vw;
+    padding: 2rem 3rem 3rem 2rem;
+    position: fixed;
+    top: 0;
+    transition: .5s ease all;
+    z-index: 10000;
+    background-color: #fff;
+    display: none;
+}
+
+.mobileNav i {
+    margin-right: 2vw;
+    font-size: 1.2rem;
+}
+
+.sideNavLinks {
+    margin: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    transition: 1s ease all;
+    z-index: 1111;
+    margin-top: 1.5rem;
+}
+
+.sideNavHead {
+    padding: 2vw;
+}
+
+.sideNavHead li {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 2vw;
+}
+
+.sideNavHead a:hover {
+    color: var(--activeColor);
+}
+
+.sideNavHead button {
+    background-color: var(--activeColor);
+    border: 1px solid var(--activeColor);
+    padding: 1vw 4vw;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 2vw;
+}
+
+.sideNavHead button:hover {
+    background-color: #ffff;
+    border: 1px solid var(--activeColor);
+    color: var(--activeColor);
+}
+
+.sideNavBottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vw;
+}
+
+.sideNavBottom p {
+    margin-top: 1vw;
+}
+
+.sideNavBottomDescription {
+    color: var(--fadeText);
+}
+
+.sideNavBottomDescription h2 {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+.sideNavBottomDescription .hr {
+    width: 100%;
+    color: var(--fadeText) !important;
+    margin-top: 1vw;
+    border-width: 2px;
+    border-radius: 4vw;
+}
+
+.sideNavBottomLinks img {
+    width: 30px;
+    margin: 1vw;
+}
+
+// ----------------------hero 
+.dot {
+    font-size: 6vw;
+    color: var(--activeColor);
+}
+
+.hero {
+    height: max-content;
+    padding: 0 2rem;
+}
+
+.heroImageSlider,
+.heroTextSlider {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heroTextSlider {
+    // background-color: pink;
+    height: max-content;
+    min-height: 100vh;
+    padding: 10% 0 0 5rem;
+}
+
+.heroTextSlider h3 {
+    font-weight: bolder;
+}
+
+.heroTextSlider h2 {
+    font-weight: bold;
+}
+
+.heroImageSlider {
+    // width: 50%;
+    height: 90vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    // background-color: pink
+}
+
+.circle1 {
+    width: 550px;
+    height: 550px;
+    border: 1.5px solid rgba(220, 203, 236, .8);
+}
+
+.circle2 {
+    width: 430px;
+    height: 430px;
+    border: 1.5px solid var(--circle2);
+
+}
+
+.circle3 {
+    width: 350px;
+    height: 350px;
+    border: 1.5px solid var(--circle3);
+}
+
+.circle3 img {
+    width: 280px;
+    height: 280px;
+}
+
+.halfCircle {
+    width: 350px !important;
+    height: 320px;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+    // width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 50%;
+}
+
+.heroImageSlider .imageSliderComponent {
+    position: absolute;
+    // width: 100%;
+    background-color: transparent;
+}
+
+.heroImageSlider .imageSliderComponent img {
+    position: relative;
+    left: 10px;
+    top: 55px;
+}
+
+// -------------------videoSection
+.videoSection {
+    position: relative;
+    height: min-content;
+}
+
+video {
+    width: 85%;
+    height: 80vh;
+    margin: auto;
+    background-color: black;
+    border-radius: 2rem;
+    border: 1px solid var(--activeColor);
+    position: relative;
+    // top: -20rem;
+    // z-index: 1;
+}
+
+video source {
+    width: 100%;
+    // height: 100%;
+}
+
+.videoIconDiv {
+    width: max-content;
+    position: absolute;
+    z-index: 21222;
+    top: 35%;
+    left: 46%;
+}
+
+.videoIconDiv img {
+    width: 100px;
+}
+
+.circleImage {
+    width: 20rem;
+    position: absolute;
+    top: 15rem;
+    left: -8rem;
+}
+
+// -----------------Our Community
+.community {
+    position: relative;
+}
+
+.cummunityHeading h2 {
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.cummunityHeading p {
+    font-size: 1.4rem;
+}
+
+.cummunityHeading .communityDescription {
+    font-size: 1.4rem;
+    color: var(--fadeText);
+}
+
+.communityDescription {
+    margin-bottom: 5vw;
+}
+
+.community .communityDescription {
+    font-size: 1.2rem;
+}
+
+.communityCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    row-gap: 6vw;
+}
+
+.cardBottomSection {
+    height: 80vh;
+    padding: 2rem;
+    // border: 2px solid violet;
+    border-radius: 2rem;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.communityCard {
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.communityCard:hover {
+    background-image: linear-gradient(var(--activeColor), #fff);
+}
+
+.communityCard:hover .cardArrow,
+.communityCard:hover .cardArrow i {
+    visibility: visible;
+    bottom: 0vw;
+}
+
+.cardArrow {
+    background-color: var(--activeColor);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    position: relative;
+    bottom: -2vw;
+    visibility: hidden;
+}
+
+.cardArrow i {
+    // font-weight: bolder;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    visibility: hidden;
+    color: #fff;
+}
+
+.communityCard p {
+    color: #fff;
+    font-weight: normal;
+}
+
+.community .square img {
+    width: 40vw;
+    position: absolute;
+    left: 75vw;
+    top: 67vw;
+    bottom: 5vw;
+    height: min-content;
+}
+
+// -----------------Programs
+.programDescription {
+    margin: 2vw 0 2vw 5vw;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.programDescription h1,
+.programDescription h2,
+.programDescription div {
+    margin-bottom: 2vw;
+}
+
+.programDescription h2 {
+    width: 70%;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.programDescription h1 {
+    font-size: 4rem;
+}
+
+.programDescription a {
+    color: black;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.programDescription a:hover {
+    color: var(--activeColor);
+}
+
+.btn {
+    color: var(--activeColor);
+    padding: 1vw 2vw;
+    border-radius: 3vw;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.programBackground img {
+    border-radius: 4vw 0 0 4vw;
+}
+
+// --------------------JobCard------------------
+.jobs,
+.community,
+.program {
+    margin-top: 4rem;
+}
+
+.jonhead h1 {
+    font-size: 3.5rem;
+}
+
+.jobBody {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0 3vw;
+}
+
+.jobSearch {
+    padding: 0 2vw;
+}
+
+.jobSearchField {
+    // background-color: pink;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    height: 4rem;
+    margin-bottom: 2vw
+}
+
+.jobSearchField option,
+.jobSearchField select {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.jobSearchField i,
+.jobSearchField label {
+    color: var(--fadeText);
+}
+
+.jobSearchField label {
+    font-weight: 300;
+}
+
+.jobSearchField .icon {
+    font-size: 1.3rem;
+    margin-right: 2vw;
+}
+
+.jobSearchField input,
+.jobSearchField select {
+    border: none;
+    outline: none;
+    border-bottom: 1.3px solid var(--activeColor);
+}
+
+.jobSearchButton button {
+    width: 100%;
+    color: #fff;
+    background-color: var(--activeColor);
+    border: none;
+    padding: 1.2vw 2vw;
+    width: 90%;
+    float: right;
+    margin-top: 2vw;
+}
+
+.jobSearchButton button:hover {
+    color: #fff;
+    background-color: var(--activeColor);
+}
+
+.allJobs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+}
+
+.jobCard {
+    border: 1px solid var(--fadeText);
+    border-radius: 1vw;
+    padding: 1vw 2vw;
+}
+
+.jobCard:hover {
+    border-color: var(--activeColor);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.jobCard h2 {
+    font-size: 1rem;
+}
+
+.jobCardHead {
+    font-weight: bold;
+}
+
+.jobCardBottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jobCardBottom p {
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.jobCardBottom i {
+    margin-right: 1vw;
+    font-size: .8rem;
+
+}
+
+.bpo {
+    background-color: green;
+    border-radius: 2vw;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: .6rem;
+}
+
+// --------------------ibex life-----------------
+.ibexLife .ibexLifeHead h1 {
+    margin: 3vw 0;
+    font-size: 4rem;
+}
+
+.ibexLifeHead p {
+    font-size: 1.5rem;
+    margin: 3vw 0;
+}
+
+.ibexLifeHead .metaDescription {
+    color: var(--fadeText);
+    font-size: 1.2rem;
+    margin-bottom: 5vw;
+}
+
+.ibexLifeHead .ibexLifeDescription {
+    font-size: 1.8rem;
+}
+
+.ibexLifeBody {
+    height: max-content;
+    width: 100%;
+    display: grid;
+    gap: 2vw;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2vw;
+}
+
+.eventCard {
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    border-radius: 2vw;
+    height: min-content;
+    // height: 100px;
+}
+
+.eventCard img {
+    border-radius: 2vw;
+    height: 100%;
+    width: 100%;
+}
+
+.eventPopUp a {
+    visibility: hidden;
+}
+
+.eventPopUp {
+    background-color: #fff;
+    position: absolute;
+    // top: -30%;
+    bottom: 10%;
+    left: 60%;
+    z-index: 5;
+    height: 5vw;
+    width: max-content;
+    padding: 1vw 4vw;
+    // height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.eventCard:hover .eventPopUp,
+.eventCard:hover .eventPopUp a {
+    visibility: visible;
+}
+
+.eventPopUp a {
+    font-weight: bold;
+    color: var(--activeColor);
+    font-size: 1.2rem;
+}
+
+.card1 {
+    grid-area: 1/1/3/3;
+}
+
+.card2 {
+    grid-area: 1/3/2/5;
+}
+
+.card3 {
+    grid-area: 1/5/3/7;
+}
+
+.card4 {
+    grid-area: 1/7/3/9;
+}
+
+.card4 .eventPopUp {
+    left: -40%;
+}
+
+.card5 {
+    grid-area: 3/2/5/4;
+}
+
+.card6 {
+    grid-area: 2/4/4/6;
+}
+
+.card7 {
+    grid-area: 3/6/5/8;
+}
+
+// -------------------app download 
+.appDownload {
+    position: inherit;
+    padding: 2vw 8vw;
+    // background-color: red;
+    background-image: url(./assets/mobileOnFloor.png);
+    // background-color: red;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: max-content;
+    // background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    z-index: 11;
+
+}
+
+.appDownload img {
+    width: 400px;
+    // position: absolute;
+}
+
+.appDownloadHead h2 {
+    margin-top: 5vw;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 6vw;
+    margin-bottom: 2vw;
+}
+
+.appDownloadBody p {
+    font-size: 1.2rem;
+    color: var(--fadeText);
+    line-height: 2.5vw;
+    margin-bottom: 2vw;
+}
+
+.appDownloadBottom {
+    // background-color: pink;
+    width: 50%;
+    position: relative;
+    z-index: 11;
+}
+
+.appDownloadHead img {
+    width: 300px;
+}
+
+.downloadCard {
+    // display: grid;
+    // grid-template-columns: 1fr 8fr;
+    padding: 1vw 4vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    border-radius: 1vw;
+    width: max-content;
+    cursor: pointer;
+    margin-top: 5vw;
+
+
+}
+
+.downloadCard:hover {
+    transform: translateY(-6px);
+}
+
+.downloadCard .get {
+    font-size: 0.8rem;
+}
+
+.downloadCard .storeName {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.downloadCard img {
+    width: 50px;
+    margin-right: 1vw;
+}
+
+.cylinder,
+.triangle {
+    position: absolute;
+}
+
+.cylinder {
+    left: 85%;
+    bottom: 35vw;
+}
+
+.triangle {
+    left: -10%;
+    bottom: -20vw;
+    z-index: 0;
+}
+
+// ----------------------job  news
+.jobNews {
+    margin-top: 20vw;
+}
+
+.jobNewsRight {
+    margin-left: 2vw;
+}
+
+.jobNewsHead h2 {
+    font-size: 2.5rem;
+}
+
+.jobNewsHead p {
+    font-size: 1.1rem;
+    color: var(--fadeText);
+    margin-bottom: 3rem;
+}
+
+.jobSubscription {
+    border: .2px solid var(--fadeText);
+    border-radius: 3vw;
+    padding: .5vw 1vw;
+    width: 100%;
+}
+
+.jobSubscription input {
+    height: 3vw;
+    width: max-content;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--fadeText);
+}
+
+.jobSubscription i {
+    font-size: 1.5rem;
+    margin-right: 1vw;
+    color: var(--fadeText);
+}
+
+.jobSubscription button {
+    background-color: var(--activeColor);
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.jobSubscription button:hover {
+    background-color: transparent;
+    color: var(--activeColor);
+    border: 1px solid var(--activeColor);
+}
+
+// --------------conversation 
+.conversation {
+    padding: 4vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4vw;
+}
+
+.conversationHead {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.conversationHead h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2vw;
+}
+
+.conversationHead img {
+    width: 300px;
+    margin-bottom: 2vw;
+}
+
+.conversationHead p {
+    color: var(--fadeText);
+    line-height: 2rem;
+    font-size: 1.1rem;
+}
+
+.conversationCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.conversationCard {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 300px;
+    border-radius: 1.5vw;
+    padding: 1vw 2vw;
+    background: linear-gradient(to right, #ff9999, #cc66ff);
+    color: #fff;
+}
+
+.conversationCard p {
+    font-weight: 300;
+    line-height: 1.4rem;
+}
+
+.conversationCard i {
+    font-size: 1.4rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: .5rem;
+    border-radius: .8rem;
+}
+
+.conversationCard button {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: .8vw 3vw;
+    font-size: 1rem;
+}
+
+.conversationCard button:hover {
+    background-color: #fff;
+    color: var(--activeColor);
+}
+
+.messanger {
+    background-image: linear-gradient(225deg, #9dddf8, #7067ce, #8a42b9);
+}
+
+.chat {
+    background-image: linear-gradient(120deg, #EA8E71, var(--activeColor), #D677B9);
+}
+
+.sayHello p {
+    font-size: 1.3rem;
+    margin: 2rem 0;
+}
+
+.conversationLinks {
+    width: 60%;
+    display: flex;
+    // background-color: pink;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conversationLinks img {
+    width: 40px;
+}
+
+// ------------------------footer
+.footer {
+    padding: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    padding-left: 4vw;
+}
+
+.footerlLeft a {
+    margin-right: 2vw;
+}
+
+.footerlLeft a,
+.footerlLeft p {
+    width: max-content;
+    color: black;
+}
+
+.footerRight {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.footerRight a {
+    margin-left: 1vw;
+}
+
+.footerRight p {
+    margin-right: 1vw;
+}
+
+.footer a,
+.footer p {
+    color: var(--fadeText);
+}
+
+.footer a:hover {
+    color: var(--activeColor);
+}
+
+// ----------------------------float icons 
+.floatIcons {
+    height: max-content;
+    display: flex;
+    width: max-content;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    position: fixed;
+    bottom: 1vw;
+    right: 1vw;
+    z-index: 122222;
+}
+
+.whatsAppFloatIcon,
+.messangerFloatIcon {
+    background-color: #fff;
+    display: flex;
+    padding: 1vw;
+    border-radius: 4vw;
+}
+
+.messangerFloatIcon {
+    margin-top: 1vw;
+}
+
+.floatIcons p {
+    color: var(--activeColor);
+    font-size: 1.1rem;
+    display: none;
+}
+
+.floatIcons .whatsAppFloatIcon:hover p,
+.messangerFloatIcon:hover p {
+    display: flex;
+}
+
+.floatIcons img {
+    width: 40px;
+    margin-right: 1vw;
+}
+
+@media(max-width: 990px) {
+    .desktopNav {
+        display: none;
+    }
+
+    .mobileNav {
+        display: flex;
+    }
+
+    .heroTextSlider {
+        padding: 20% 0 0 5rem;
+    }
+
+    .heroTextSlider h3,
+    .heroTextSlider .title {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    .heroImageSlider {
+        padding: 50rem 0 5rem 0;
+    }
+
+    .communityCards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .community .square img {
+        width: 500px;
+        position: absolute;
+        left: 60vw;
+        top: 140vw;
+    }
+
+    .jobs,
+    .community,
+    .program {
+        margin: 8rem 0;
+    }
+
+    .program h1 {
+        font-size: 3.5rem;
+        width: 100%;
+    }
+
+    .programDescription .h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+    }
+
+    .programDescription {
+        padding: 2rem 2rem;
+        width: 100%;
+    }
+
+    .programDescription h1 {
+        font-size: 3rem;
+    }
+
+    .programDescription button {
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+
+    .programBackground {
+        display: none;
+    }
+
+    .jobBody {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        place-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+
+    .jobBody button {
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .ibexLife .ibexLifeHead h1 {
+        font-size: 3rem;
+    }
+
+    .ibexLife .ibexLifeHead .ibexLifeDescription {
+        font-size: 1.4rem;
+    }
+
+    .ibexLifeHead .metaDescription {
+        font-size: 1.2rem;
+    }
+
+    .ibexLifeBody {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .eventCard{
+        grid-area: auto;
+    }
+    .appDownloadBottom{
+        // background-color: pink;
+        width: 80%;
+        margin: auto;
+    }
+    .downloadCard{
+        padding: 1vw 8vw;
+    }
+    .triangle{
+        bottom: -30vw;
+        left: -15vw;
+    }
+    .appDownload{
+        background-image: none;
+    }
+    .jobNews{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-top: 20vw;
+    }
+    .jobNewsLeft img{
+        width: 50%;
+        margin: auto;
+    }
+    .jobNewsRight{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .jobSubscription{
+        height: 4rem;
+        border-radius: 2rem;
+        padding: 1.2rem;
+    }
+    .jobSubscription .btn{
+        height: 3rem;
+        padding: 1rem 2rem;
+    }
+    .conversation{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 2rem 4rem ;
+        padding-top: 8rem;
+    }
+    .conversationCards{
+        width: 70%;
+    }
+    .conversationCard{
+        width: 240px;
+        // min-height: 250px;
+    }
+    .conversationCard button{
+        height: 3rem;
+        margin-top: 1rem;
+    }
+    .footer{
+        grid-template-columns: 1fr;
+    }
+    .footerRight{
+        align-items: start;
+        justify-content:start;
+        margin-top: -1rem;
+    }
+}
+
+@media(max-width: 769px) {
+    .videoSection video{
+        height: 50vh;
+    }
+    .videoIconDiv{
+        left: 42%;
+        width: 50px;
+    }
+    .videoIconDiv img{
+        width: 80px;
+    }
+    .circleImage{
+        left: -5rem;
+        top: 10rem;
+    }
+    .circleImage img{
+        width: 200px;
+    }
+    .communityCards{
+        grid-template-columns: 1fr;
+    }
+    .communityCard{
+        max-height: 50vh;
+        width: 80%;
+        margin: auto;
+    }
+    .cardArrow{
+        bottom: 0rem;
+    }
+    .communityCard:hover .cardArrow{
+        bottom: 11rem;
+    }
+    .community .square img{
+        width: 300px;
+        left: 75vw;
+        top: 240vw;
+    }
+    .allJobs{
+        grid-template-columns: 1fr;
+        grid-row-gap: 2rem;
+    }
+    .jobCard{
+        padding: 1rem 2rem;
+    }
+    .appDownload{
+        padding-top: 8rem;
+    }
+    .appDownloadHead{
+        margin-bottom: 3rem;
+    }
+    .appDownloadBottom{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        // gap: 1rem;
+    }
+    .downloadCard{
+        width: 100%;
+        z-index: 1111111;
+    }
+}
+
+@media(max-width: 576px) {
+    .heroTextSlider,.heroRow1{
+        width: 100%;
+    }
+    .heroTextSlider .title {
+        width: max-content;
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
+    .heroTextSlider h3{
+        font-weight: bolder;
+        font-size: 2.8rem;
+    }
+    .heroTextSlider h2{
+        margin-top: 1rem;
+        font-weight: 400 !important;
+    }
+    .hero{
+        position: relative;
+        height: max-content;
+    }
+    .heroRow1{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-top: 0;
+        position: relative;
+    }
+    .heroImageSlider{
+        padding: 0;
+        margin: 0;
+        height: max-content;
+        width: max-content;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        top: -20rem;
+    }
+    .circleImage{
+        display: none;
+    }
+    .videoSection video{
+        height: 40vh;
+        padding: 0;
+        border-radius: 1rem;
+    }
+    .videoSection{
+        padding: 0;
+    }
+    .community,.program,.ibexLifeHead,.jobNews{
+        padding: 2rem;
+    }
+    .community h2{
+        font-size: 2.5rem;
+        font-weight: 800;
+    }
+    .appDownload h2{
+        font-size: 2.4rem;
+        line-height: 2.7rem;
+    }
+    .appDownloadHead img,.conversationHead img{
+        width: 200px;
+    }
+    .appDownloadBody p{
+        line-height: 2rem;
+    }
+    .community p,.ibexLifeHead{
+        font-size: 1.4rem ;
+        width: 100%;
+    }
+    .communityDescription,.ibexLifeHead .metaDescription,.appDownloadBody p {
+        font-size: 1.2rem !important;
+    }
+    .communityCard{
+        width: 90%;
+        border-radius: .6rem;
+        height: max-content;
+    }
+    .square img{
+        top: -32rem; 
+    }
+    .program h1,.jobNewsHead h2,.conversationHead h2{
+        font-size: 2.4rem;
+        width: 100%;
+    }
+    .programDescription .h1,.jobs h1,.ibexLifeHead .title{
+        font-size: 2rem !important;
+        font-weight: 800;
+        margin-top: 2rem;
+    }
+    .programDescription h2,.ibexLifeHead p{
+        font-size: 1.2rem !important;
+        text-align: left;
+    }
+    .programDescription{
+        padding: 0 !important;
+    }
+    .conversation{
+        padding: 1rem;
+    }
+    .appDownloadBody{
+        margin-bottom: 2rem;
+    }
+    .btn{
+        padding: 1rem 2rem;
+        border-radius: 3rem;
+    }
+    .triangle{
+        top: 35rem;
+        left: -10rem;
+    }
+    .cylinder{
+        left: 20rem;
+        top: -18rem;
+    }
+    .conversationLinks a img{
+        width: 30px;
+    }
+    .conversationLinks p{
+        display: block;
+    }
+    .footerlLeft{
+        display: none;
+    }
+    .footerRight{
+        margin: auto;
+    }
+    .whatsAppFloatIcon,.messangerFloatIcon{
+        border-radius: 4rem;
+        padding: .7rem;
+    }
+    .videoIconDiv{
+        left:38%;
+    }
+    .mobileNav i{
+        margin-right: 1rem;
+    }
+
+}
+
+@media(max-width: 480px) {
+    .heroTextSlider{
+        padding: 0;
+        padding-top: 4rem;
+    }
+    .heroRow2 video{
+        width: 100%;;
+    }
+    .square img{
+        top: 32rem;
+    }
+    .card1{
+        grid-area: 1/1/2/2;
+    }
+    .jobNewsHead h2,.conversationHead h2{
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    .conversationCard{
+        width: 200px;
+        height: 300px;
+    }
+}
+@media(max-width: 300px) {
+    .heroTextSlider .title{
+        font-size: 2rem;
+    }
+    .heroImageSlider{
+        width: 20%;
+    }
+    .circle1{
+        width: 200px;
+        height: 200px;
+    }
+    .circle2{
+        width: 170px;
+        height: 170px;
+    }
+    .circle3{
+        width: 150px;
+        height: 150px;
+    }
+    .circle3 img{
+        width: 150px;
+        height: 150px;
+    }
+    .halfCircle {
+        width: 180px !important;
+        height: 200px !important;        
+    }
+    .jobNews h2,.appDownloadHead h2,.community h2,.program h1,.prgramSliderHeading h1,.jobs h1,.ibexLifeHead .title{
+        font-size: 1.8rem !important;
+    }
+    .community p{
+        font-size: 1.3rem;
+    }
+    .appDownloadBody p,.community .communityDescription,.ibexLifeHead .metaDescription{
+        font-size: 1rem !important;
+    }
+    .programDescription h2{
+        width: 100%;
+        font-size: 1rem !important;
+        padding: 0;
+        // background-color: pink;
+        text-align: left;
+    }
+    .jobCard{
+        border-radius: 1rem;
+    }
+    .ibexLifeHead .title{
+        margin-bottom: 2rem !important;
+    }
+    .ibexLifeHead{
+        padding: 1rem;
+    }
+    .ibexLifeHead p{
+        width: 100%;
+    }
+    .ibexLifeBody{
+        grid-template-columns: 1fr;
+    }
+    .card1{
+        grid-area: 1/1/2/2;
+    }
+    .card2{
+        grid-area: 2/1/3/2;
+    }
+    .card3{
+        grid-area: 3/1/4/2;
+    }
+    .card4{
+        grid-area: 4/1/5/2;
+    }
+    .card5{
+        grid-area: 5/1/6/2;
+    }
+    .card6{
+        grid-area: 6/1/7/2;
+    }
+    .card7{
+        grid-area: 7/1/8/2;
+    }
+    .eventPopUp{
+        height: 2rem;
+    }
+    .eventPopUp a{
+        font-size: 1rem;
+    }
+    .appDownloadHead img{
+        width: 150px;
+    }
+    .triangle,.cylinder{
+        display: none;
+    }
+    .jobNews h2,.jobNews p,.jobSubscription{
+        width: 60%;
+    }
+    .jobSubscription{
+        padding: 1rem;
+        height: 3rem;
+        width: 100%;
+    }
+    .jobSubscription input{
+        height: 1rem;
+        font-size: 1rem;
+        width: 70px;
+        font-size: .8rem;
+    }
+    .jobSubscription i{
+        font-size: 1rem;
+        margin-right: 1rem;
+    }
+    .jobSubscription button{
+        height: 1rem !important;
+        // padding: 1rem;
+        // font-size: .6rem;
+        width: 70px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .conversationCards{
+        grid-template-columns: 1fr;
+    }
+    .conversationCard{
+        padding: 1rem;
+        border-radius: 1.2rem;
+    }
+    .conversationTitle button{
+        font-size: 1rem !important;
+        padding: 1rem 3rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .messangerFloatIcon{display: none;}
+
+    .conversationLinks a{
+        margin-top: 1rem;
+    }
+    .conversationLinks{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .conversationLinks a{
+        grid-area: auto;
+    }
+    .sideNavLinks{
+        background-color: pink;
+        padding: 2rem;
+    }
+    .sideNavHead li{
+        margin-bottom: 1rem;
+    }
+    .sideNavHead{
+        margin-bottom: 2rem;
+    }
+    .sideNavHead button{
+        font-size: 1rem;
+        padding: .5rem 2rem;
+    }
+    .sideNavBottomDescription h2,.sideNavBottomDescription p{
+        margin-bottom: 1rem;
+    }
+    .mobileNavMenu i{
+        margin-right: 1rem;
+    }
+    .videoIconDiv{
+        left: 30%;
+    }
+}

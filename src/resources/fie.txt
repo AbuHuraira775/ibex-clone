@@ -1,0 +1,38 @@
+<!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/3385c93c6e.js" crossorigin="anonymous"></script>
+    
+
+nav Logic
+
+  const controlNavbar = () => {
+    console.log('scroll is running')
+    if (window.scrollY > lastScrollY) {
+      setStylishNav(false)
+      setShow(false)
+    }
+    else if (window.scrollY < lastScrollY) {
+      setShow(true)
+      if (window.scrollY <= 12) {
+        setStylishNav(false)
+      }
+      else {
+        setStylishNav(true)
+      }
+    }
+
+    setLastScrollY(window.scrollY);
+    console.log('last', lastScrollY)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar)
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  })
+
+different conditions for different navs
+      <div className={`desktopNav  space-between`} style={show ? (stylishNav ? stylehNav : showNav) : hideNav}  >
+
+box shadow of navbar
+box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
